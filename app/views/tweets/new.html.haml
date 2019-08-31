@@ -1,0 +1,7 @@
+.container
+  .row
+    = form_for @tweet, html:{class: "col s12"} do |f|
+      .row
+        .input-field.col.s8.offset-s2
+          = f.text_field :text, class: "materialize-textarea", placeholder: "タイトル"
+        = f.submit '作成', class:"btn orange darken-3"

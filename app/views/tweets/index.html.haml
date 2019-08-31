@@ -1,0 +1,19 @@
+%nav
+  .nav-wrapper.blue.accent-2
+    %a.brand-logo{:href => "#"}
+    %ul#nav-mobile.right.hide-on-med-and-down
+      %li
+        %a{:href => "sass.html"}悠平
+      %li
+        %a{:href => "badges.html"}は
+      %li
+        %a{:href => "collapsible.html"}まだいける
+
+  .contents.row
+    - @tweets.each do |tweet|
+      = simple_format(tweet.text)
+    = paginate(@tweets)
+
+
+
+
